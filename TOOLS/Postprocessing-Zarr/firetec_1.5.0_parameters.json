@@ -1,0 +1,1201 @@
+{
+  "firetec_version": "1.5.0",
+  "generated_by": "build_parameter_catalog.py",
+  "source": "CODE-1.5.0 (QueryGridlist_* calls and their variable declarations)",
+  "source_git_commit": "5c05a3539a5405ac20f52630ec00271f4b400cdf",
+  "note": "default is null where FIRETEC sets the value in code or has none",
+  "parameters": {
+    "nEmit": {
+      "type": "integer",
+      "default": 0,
+      "description": "Number of resolved emitted gas species",
+      "variable": "nEmit",
+      "read_in": "Emissions/input_ems.F90:21",
+      "declared_in": "Emissions/variables_ems.F90:10"
+    },
+    "Species": {
+      "type": "string array",
+      "default": null,
+      "description": "",
+      "variable": "spEmit",
+      "read_in": "Emissions/input_ems.F90:23",
+      "declared_in": null
+    },
+    "cpEmit": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "cpEmit",
+      "read_in": "Emissions/input_ems.F90:26",
+      "declared_in": null
+    },
+    "mwEmit": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "mwEmit",
+      "read_in": "Emissions/input_ems.F90:27",
+      "declared_in": null
+    },
+    "efEmit": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "efEmit",
+      "read_in": "Emissions/input_ems.F90:32",
+      "declared_in": null
+    },
+    "nAero": {
+      "type": "integer",
+      "default": 0,
+      "description": "Number of resolved emitted aerosol species",
+      "variable": "nAero",
+      "read_in": "Emissions/input_ems.F90:61",
+      "declared_in": "Emissions/variables_ems.F90:11"
+    },
+    "nMAero": {
+      "type": "integer",
+      "default": 2,
+      "description": "Number of resolved moments for aerosol size distributions",
+      "variable": "nMAero",
+      "read_in": "Emissions/input_ems.F90:62",
+      "declared_in": "Emissions/variables_ems.F90:12"
+    },
+    "SpeciesAero": {
+      "type": "string array",
+      "default": null,
+      "description": "",
+      "variable": "spAero",
+      "read_in": "Emissions/input_ems.F90:64",
+      "declared_in": null
+    },
+    "rhoAero": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "rhoAero",
+      "read_in": "Emissions/input_ems.F90:66",
+      "declared_in": null
+    },
+    "efAero": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "efAero",
+      "read_in": "Emissions/input_ems.F90:71",
+      "declared_in": null
+    },
+    "shapeFB": {
+      "type": "integer",
+      "default": 1,
+      "description": "Flag to determine characteristic shape of firebrands (1=disk, 2=cylinder, 3=sphere)",
+      "variable": "shapeFB",
+      "read_in": "Firebrands/input_fb.F90:11",
+      "declared_in": "Firebrands/variables_fb.F90:9"
+    },
+    "dsizeFB": {
+      "type": "integer",
+      "default": 1,
+      "description": "Flag to determine how size changes as burning commences (1=radius, 2=height)",
+      "variable": "dsizeFB",
+      "read_in": "Firebrands/input_fb.F90:12",
+      "declared_in": "Firebrands/variables_fb.F90:10"
+    },
+    "radiusFB": {
+      "type": "real",
+      "default": 0.001,
+      "description": "initial radius of firebrands (m)",
+      "variable": "radius",
+      "read_in": "Firebrands/input_fb.F90:13",
+      "declared_in": "Firebrands/variables_fb.F90:11"
+    },
+    "heightFB": {
+      "type": "real",
+      "default": 0.001,
+      "description": "initial height of firebrands (m)",
+      "variable": "height",
+      "read_in": "Firebrands/input_fb.F90:14",
+      "declared_in": "Firebrands/variables_fb.F90:12"
+    },
+    "rhoFB": {
+      "type": "real",
+      "default": 100,
+      "description": "initial density of firebrands (kg/m3)",
+      "variable": "rhoFB",
+      "read_in": "Firebrands/input_fb.F90:15",
+      "declared_in": "Firebrands/variables_fb.F90:13"
+    },
+    "TempThreshFB": {
+      "type": "real",
+      "default": 500.0,
+      "description": "temperature threshold for launching firebrands (K)",
+      "variable": "TempHot",
+      "read_in": "Firebrands/input_fb.F90:16",
+      "declared_in": "Firebrands/variables_fb.F90:14"
+    },
+    "outname_fb": {
+      "type": "string",
+      "default": "brand.out",
+      "description": "Name of firebrand output files",
+      "variable": "outname_fb",
+      "read_in": "Firebrands/input_fb.F90:17",
+      "declared_in": "Firebrands/variables_fb.F90:15"
+    },
+    "restartfile_fb": {
+      "type": "string",
+      "default": "comp.out.h5",
+      "description": "Name of restart file",
+      "variable": "restartfile_fb",
+      "read_in": "Firebrands/input_fb.F90:18",
+      "declared_in": "Firebrands/variables_fb.F90:16"
+    },
+    "isource_function": {
+      "type": "integer",
+      "default": null,
+      "description": "",
+      "variable": "isource_function",
+      "read_in": "HeatSource/input_heat.F90:12",
+      "declared_in": null
+    },
+    "nsource_hs": {
+      "type": "integer",
+      "default": null,
+      "description": "",
+      "variable": "nsource_hs",
+      "read_in": "HeatSource/input_heat.F90:13",
+      "declared_in": null
+    },
+    "av_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "av_hs",
+      "read_in": "HeatSource/input_heat.F90:16",
+      "declared_in": null
+    },
+    "flux_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "flux_hs",
+      "read_in": "HeatSource/input_heat.F90:17",
+      "declared_in": null
+    },
+    "freq_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "freq_hs",
+      "read_in": "HeatSource/input_heat.F90:18",
+      "declared_in": null
+    },
+    "depth_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "depth_hs",
+      "read_in": "HeatSource/input_heat.F90:19",
+      "declared_in": null
+    },
+    "radius_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "radius_hs",
+      "read_in": "HeatSource/input_heat.F90:23",
+      "declared_in": null
+    },
+    "xcen_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "xcen_hs",
+      "read_in": "HeatSource/input_heat.F90:24",
+      "declared_in": null
+    },
+    "ycen_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "ycen_hs",
+      "read_in": "HeatSource/input_heat.F90:25",
+      "declared_in": null
+    },
+    "xl_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "xl_hs",
+      "read_in": "HeatSource/input_heat.F90:29",
+      "declared_in": null
+    },
+    "xu_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "xu_hs",
+      "read_in": "HeatSource/input_heat.F90:30",
+      "declared_in": null
+    },
+    "yl_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "yl_hs",
+      "read_in": "HeatSource/input_heat.F90:31",
+      "declared_in": null
+    },
+    "yu_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "yu_hs",
+      "read_in": "HeatSource/input_heat.F90:32",
+      "declared_in": null
+    },
+    "imass_source": {
+      "type": "integer",
+      "default": null,
+      "description": "",
+      "variable": "imass_source",
+      "read_in": "HeatSource/input_heat.F90:34",
+      "declared_in": null
+    },
+    "fm_hs": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "fm_hs",
+      "read_in": "HeatSource/input_heat.F90:37",
+      "declared_in": null
+    },
+    "MLRHRRinputs": {
+      "type": "integer",
+      "default": 0,
+      "description": "If 1, provide tab-delimited file titled \"MLRHRRinputs.dat.#\" for each heat source",
+      "variable": "MLRHRRinputs",
+      "read_in": "HeatSource/input_heat.F90:39",
+      "declared_in": "HeatSource/variables_heat.F90:31"
+    },
+    "se_frq_write": {
+      "type": "integer",
+      "default": 1,
+      "description": "Frequency in time cycles to write sensor data",
+      "variable": "se_frq_write",
+      "read_in": "Sensors/input_sense.F90:12",
+      "declared_in": "Sensors/variables_sense.F90:11"
+    },
+    "numsensors": {
+      "type": "integer",
+      "default": 5,
+      "description": "default number of sensors",
+      "variable": "numsensors",
+      "read_in": "Sensors/input_sense.F90:13",
+      "declared_in": "Sensors/variables_sense.F90:12"
+    },
+    "ncycle": {
+      "type": "integer",
+      "default": 0,
+      "description": "time step to begin sensors",
+      "variable": "ncycle",
+      "read_in": "Sensors/input_sense.F90:14",
+      "declared_in": "Sensors/variables_sense.F90:13"
+    },
+    "locfile": {
+      "type": "integer",
+      "default": 0,
+      "description": "if providing text file for sensor locations",
+      "variable": "locfile",
+      "read_in": "Sensors/input_sense.F90:15",
+      "declared_in": "Sensors/variables_sense.F90:14"
+    },
+    "sensorfile": {
+      "type": "string",
+      "default": "sensor",
+      "description": "Name of the sensor output files",
+      "variable": "sensorfile",
+      "read_in": "Sensors/input_sense.F90:21",
+      "declared_in": "Sensors/variables_sense.F90:15"
+    },
+    "sensorlocs": {
+      "type": "string",
+      "default": "sensorlocs.txt",
+      "description": "File that contains three columns - X, Y, and Z locations for all sensors - must be tab-delimited",
+      "variable": "sensorlocs",
+      "read_in": "Sensors/input_sense.F90:24",
+      "declared_in": "Sensors/variables_sense.F90:16"
+    },
+    "se_xloc": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "se_xloc",
+      "read_in": "Sensors/input_sense.F90:31",
+      "declared_in": null
+    },
+    "se_yloc": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "se_yloc",
+      "read_in": "Sensors/input_sense.F90:32",
+      "declared_in": null
+    },
+    "se_zloc": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "se_zloc",
+      "read_in": "Sensors/input_sense.F90:33",
+      "declared_in": null
+    },
+    "irst": {
+      "type": "integer",
+      "default": 0,
+      "description": "Restart flag",
+      "variable": "irst",
+      "read_in": "input.F90:14",
+      "declared_in": "variables.F90:15"
+    },
+    "nt": {
+      "type": "integer",
+      "default": 10000,
+      "description": "Total number of large timesteps",
+      "variable": "nt",
+      "read_in": "input.F90:15",
+      "declared_in": "variables.F90:16"
+    },
+    "nts": {
+      "type": "integer",
+      "default": 10,
+      "description": "Number of small timesteps (higrad) in a large timestep",
+      "variable": "nts",
+      "read_in": "input.F90:16",
+      "declared_in": "variables.F90:17"
+    },
+    "dts": {
+      "type": "real",
+      "default": 0.001,
+      "description": "Temporal size of a small timestep (higrad)",
+      "variable": "dts",
+      "read_in": "input.F90:17",
+      "declared_in": "variables.F90:18"
+    },
+    "ntp": {
+      "type": "integer",
+      "default": 10,
+      "description": "Number of small timesteps (firetec) in a large timestep",
+      "variable": "ntp",
+      "read_in": "input.F90:18",
+      "declared_in": "variables.F90:19"
+    },
+    "n": {
+      "type": "integer",
+      "default": 200,
+      "description": "Number of cells in the x dimension",
+      "variable": "n",
+      "read_in": "input.F90:19",
+      "declared_in": "variables.F90:20"
+    },
+    "m": {
+      "type": "integer",
+      "default": 200,
+      "description": "Number of cells in the y dimension",
+      "variable": "m",
+      "read_in": "input.F90:20",
+      "declared_in": "variables.F90:21"
+    },
+    "l": {
+      "type": "integer",
+      "default": 40,
+      "description": "Number of cells in the z dimension",
+      "variable": "l",
+      "read_in": "input.F90:21",
+      "declared_in": "variables.F90:22"
+    },
+    "dx": {
+      "type": "real",
+      "default": 2.0,
+      "description": "Size of cell in x dimension",
+      "variable": "dx",
+      "read_in": "input.F90:22",
+      "declared_in": "variables.F90:23"
+    },
+    "dy": {
+      "type": "real",
+      "default": 2.0,
+      "description": "Size of cell in y dimension",
+      "variable": "dy",
+      "read_in": "input.F90:23",
+      "declared_in": "variables.F90:24"
+    },
+    "dz": {
+      "type": "real",
+      "default": 15.0,
+      "description": "Size of cell in z dimension before stretching",
+      "variable": "dz",
+      "read_in": "input.F90:24",
+      "declared_in": "variables.F90:25"
+    },
+    "aa1": {
+      "type": "real",
+      "default": 0.1,
+      "description": "Stretching parameter for z direction",
+      "variable": "aa1",
+      "read_in": "input.F90:25",
+      "declared_in": "variables.F90:26"
+    },
+    "nprocx": {
+      "type": "integer",
+      "default": 8,
+      "description": "Number of processors in the x dimension",
+      "variable": "nprocx",
+      "read_in": "input.F90:26",
+      "declared_in": "variables.F90:27"
+    },
+    "nprocy": {
+      "type": "integer",
+      "default": 8,
+      "description": "Number of processors in the y dimension",
+      "variable": "nprocy",
+      "read_in": "input.F90:27",
+      "declared_in": "variables.F90:28"
+    },
+    "topofile": {
+      "type": "string",
+      "default": "",
+      "description": "Name of topo file",
+      "variable": "topofile",
+      "read_in": "input.F90:28",
+      "declared_in": "variables.F90:97"
+    },
+    "frqoutput": {
+      "type": "integer",
+      "default": 100,
+      "description": "Frequency (large time step) of output",
+      "variable": "frqoutput",
+      "read_in": "input.F90:31",
+      "declared_in": "variables.F90:85"
+    },
+    "frqfilstr": {
+      "type": "integer",
+      "default": 0,
+      "description": "Frequency (large time step) of file filtering",
+      "variable": "frqfilstr",
+      "read_in": "input.F90:32",
+      "declared_in": "variables.F90:86"
+    },
+    "outname": {
+      "type": "string",
+      "default": "comp.out",
+      "description": "Name of output files",
+      "variable": "outname",
+      "read_in": "input.F90:33",
+      "declared_in": "variables.F90:95"
+    },
+    "restartfile": {
+      "type": "string",
+      "default": "comp.out.h5",
+      "description": "Name of restart file",
+      "variable": "restartfile",
+      "read_in": "input.F90:34",
+      "declared_in": "variables.F90:96"
+    },
+    "icfmeflag": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option to read-in slices of the grid",
+      "variable": "icfmeflag",
+      "read_in": "input.F90:35",
+      "declared_in": "variables.F90:87"
+    },
+    "ihdf": {
+      "type": "integer",
+      "default": 1,
+      "description": "Use HDF5 for I/O (uneffective if you compile without -DHDF)",
+      "variable": "ihdf",
+      "read_in": "input.F90:36",
+      "declared_in": "variables.F90:88"
+    },
+    "ih": {
+      "type": "integer",
+      "default": 3,
+      "description": "Number of halo cells",
+      "variable": "ih",
+      "read_in": "input.F90:39",
+      "declared_in": "variables.F90:29"
+    },
+    "nr": {
+      "type": "integer",
+      "default": 5,
+      "description": "Number of cells for lateral relaxation (irlx, irly)",
+      "variable": "nr",
+      "read_in": "input.F90:40",
+      "declared_in": "variables.F90:30"
+    },
+    "ibcx": {
+      "type": "integer",
+      "default": 1,
+      "description": "X/Y boundary conditions (0=cyclic,1<= different relaxation options)",
+      "variable": "ibcx",
+      "read_in": "input.F90:41",
+      "declared_in": "variables.F90:31"
+    },
+    "ibcy": {
+      "type": "integer",
+      "default": 1,
+      "description": "X/Y boundary conditions (0=cyclic,1<= different relaxation options)",
+      "variable": "ibcy",
+      "read_in": "input.F90:42",
+      "declared_in": "variables.F90:32"
+    },
+    "ibclatopen": {
+      "type": "integer",
+      "default": 0,
+      "description": "Top boundary relaxation options",
+      "variable": "ibclatopen",
+      "read_in": "input.F90:43",
+      "declared_in": "variables.F90:33"
+    },
+    "ibctopopen": {
+      "type": "integer",
+      "default": 0,
+      "description": "Open outlet, feeslip option at top",
+      "variable": "ibctopopen",
+      "read_in": "input.F90:44",
+      "declared_in": "variables.F90:34"
+    },
+    "iab": {
+      "type": "integer",
+      "default": 1,
+      "description": "Options for top absorption initialization",
+      "variable": "iab",
+      "read_in": "input.F90:45",
+      "declared_in": "variables.F90:35"
+    },
+    "zab": {
+      "type": "real",
+      "default": 400.0,
+      "description": "Bottom of top damper (m)",
+      "variable": "zab",
+      "read_in": "input.F90:46",
+      "declared_in": "variables.F90:36"
+    },
+    "zabt": {
+      "type": "real",
+      "default": 400.0,
+      "description": "Bottom of top damper for iab=3 option",
+      "variable": "zabt",
+      "read_in": "input.F90:47",
+      "declared_in": "variables.F90:37"
+    },
+    "tow": {
+      "type": "real",
+      "default": 10.0,
+      "description": "Magnitude parameter for top relaxation",
+      "variable": "tow",
+      "read_in": "input.F90:48",
+      "declared_in": "variables.F90:38"
+    },
+    "itheta": {
+      "type": "integer",
+      "default": 0,
+      "description": "Stable layer at domain top",
+      "variable": "itheta",
+      "read_in": "input.F90:49",
+      "declared_in": "variables.F90:39"
+    },
+    "tambient": {
+      "type": "real",
+      "default": 300.0,
+      "description": "Ambient temperature (K)",
+      "variable": "tambient",
+      "read_in": "input.F90:52",
+      "declared_in": "variables.F90:60"
+    },
+    "pressground": {
+      "type": "real",
+      "default": 101325.0,
+      "description": "Reference pressure for ground (Pa)",
+      "variable": "pressground",
+      "read_in": "input.F90:53",
+      "declared_in": "variables.F90:61"
+    },
+    "zgroundref": {
+      "type": "real",
+      "default": 0.0,
+      "description": "Reference elevation for ground (m)",
+      "variable": "zgroundref",
+      "read_in": "input.F90:54",
+      "declared_in": "variables.F90:62"
+    },
+    "iperturb": {
+      "type": "integer",
+      "default": 0,
+      "description": "Perturbation option for cyclic runs",
+      "variable": "iperturb",
+      "read_in": "input.F90:55",
+      "declared_in": "variables.F90:63"
+    },
+    "u0": {
+      "type": "real",
+      "default": 3.0,
+      "description": "Initial ambient x direction wind magnitude (m/s)",
+      "variable": "u0",
+      "read_in": "input.F90:56",
+      "declared_in": "variables.F90:64"
+    },
+    "uswitch": {
+      "type": "integer",
+      "default": 2,
+      "description": "Options for x direction ambient wind profiles",
+      "variable": "uswitch",
+      "read_in": "input.F90:57",
+      "declared_in": "variables.F90:65"
+    },
+    "v0": {
+      "type": "real",
+      "default": 0.0,
+      "description": "Initial ambient y direction wind magnitude (m/s)",
+      "variable": "v0",
+      "read_in": "input.F90:58",
+      "declared_in": "variables.F90:66"
+    },
+    "vswitch": {
+      "type": "integer",
+      "default": 0,
+      "description": "Options for y direction ambient wind profiles",
+      "variable": "vswitch",
+      "read_in": "input.F90:59",
+      "declared_in": "variables.F90:67"
+    },
+    "zu": {
+      "type": "real",
+      "default": 25.0,
+      "description": "Height of referenced ambient winds",
+      "variable": "zu",
+      "read_in": "input.F90:61",
+      "declared_in": "variables.F90:68"
+    },
+    "ius": {
+      "type": "integer",
+      "default": 0,
+      "description": "Lower x indice for reference zone in lai computation (when 0 whole domain is used) for uswitch=2",
+      "variable": "ius",
+      "read_in": "input.F90:62",
+      "declared_in": "variables.F90:69"
+    },
+    "iue": {
+      "type": "integer",
+      "default": 0,
+      "description": "Upper x indice for reference zone in lai computation (when 0 whole domain is used) for uswitch=2",
+      "variable": "iue",
+      "read_in": "input.F90:63",
+      "declared_in": "variables.F90:70"
+    },
+    "jus": {
+      "type": "integer",
+      "default": 0,
+      "description": "Lower y indice for reference zone in lai computation (when 0 whole domain is used) for vswitch=2",
+      "variable": "jus",
+      "read_in": "input.F90:64",
+      "declared_in": "variables.F90:71"
+    },
+    "jue": {
+      "type": "integer",
+      "default": 0,
+      "description": "Upper y indice for reference zone in lai computation (when 0 whole domain is used) for vswitch=2",
+      "variable": "jue",
+      "read_in": "input.F90:65",
+      "declared_in": "variables.F90:72"
+    },
+    "slopeangle": {
+      "type": "real",
+      "default": 0.0,
+      "description": "Archaic slope usage (use topo now) for rotating gravity",
+      "variable": "slopeangle",
+      "read_in": "input.F90:66",
+      "declared_in": "variables.F90:73"
+    },
+    "slopeazimuth": {
+      "type": "real",
+      "default": 0.0,
+      "description": "Archaic slope usage (use topo now) for rotating gravity",
+      "variable": "slopeazimuth",
+      "read_in": "input.F90:67",
+      "declared_in": "variables.F90:74"
+    },
+    "icorio": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option fors coriolis effect",
+      "variable": "icorio",
+      "read_in": "input.F90:70",
+      "declared_in": "variables.F90:55"
+    },
+    "ilspgf": {
+      "type": "integer",
+      "default": 0,
+      "description": "Large scale pressure gradient forcing options",
+      "variable": "ilspgf",
+      "read_in": "input.F90:71",
+      "declared_in": "variables.F90:56"
+    },
+    "izlspgf": {
+      "type": "integer",
+      "default": 1,
+      "description": "Reference for max flux is whole domain or a slice at height zu (1)",
+      "variable": "izlspgf",
+      "read_in": "input.F90:72",
+      "declared_in": "variables.F90:57"
+    },
+    "frqlspgf": {
+      "type": "integer",
+      "default": 10000,
+      "description": "Large scale pressure gradient forcing frequency",
+      "variable": "frqlspgf",
+      "read_in": "input.F90:73",
+      "declared_in": "variables.F90:58"
+    },
+    "islip": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for no-slip boundary condition forcing",
+      "variable": "islip",
+      "read_in": "input.F90:74",
+      "declared_in": "variables.F90:59"
+    },
+    "iord": {
+      "type": "integer",
+      "default": 2,
+      "description": "Advection order of resolution",
+      "variable": "iord",
+      "read_in": "input.F90:75",
+      "declared_in": "variables.F90:75"
+    },
+    "nonos": {
+      "type": "integer",
+      "default": 1,
+      "description": "Advection for non-oscillatory flow option",
+      "variable": "nonos",
+      "read_in": "input.F90:76",
+      "declared_in": "variables.F90:76"
+    },
+    "idiv": {
+      "type": "integer",
+      "default": 1,
+      "description": "Divergent flows option",
+      "variable": "idiv",
+      "read_in": "input.F90:77",
+      "declared_in": "variables.F90:77"
+    },
+    "nfct": {
+      "type": "integer",
+      "default": 1,
+      "description": "",
+      "variable": "nfct",
+      "read_in": "input.F90:78",
+      "declared_in": "variables.F90:78"
+    },
+    "nonosold": {
+      "type": "integer",
+      "default": 1,
+      "description": "Non-oscillatory option in mpdataold",
+      "variable": "nonosold",
+      "read_in": "input.F90:79",
+      "declared_in": "variables.F90:79"
+    },
+    "nfuel": {
+      "type": "integer",
+      "default": 1,
+      "description": "Number of fuel types for multiple-fuels",
+      "variable": "nfuel",
+      "read_in": "input.F90:82",
+      "declared_in": "variables.F90:81"
+    },
+    "ivegread": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for fuel bed read-in",
+      "variable": "ivegread",
+      "read_in": "input.F90:83",
+      "declared_in": "variables.F90:82"
+    },
+    "rhoMicro": {
+      "type": "real",
+      "default": 500.0,
+      "description": "Fuel's true density (kg/m3)",
+      "variable": "rhoMicro",
+      "read_in": "input.F90:84",
+      "declared_in": "variables.F90:83"
+    },
+    "cpwood": {
+      "type": "real",
+      "default": 2500.0,
+      "description": "Fuel's heat capacity (J/kg K)",
+      "variable": "cpwood",
+      "read_in": "input.F90:85",
+      "declared_in": "variables.F90:84"
+    },
+    "ifire": {
+      "type": "integer",
+      "default": 1,
+      "description": "Firetec capability",
+      "variable": "ifire",
+      "read_in": "input.F90:88",
+      "declared_in": "variables.F90:40"
+    },
+    "inonlocal": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for non-local burning",
+      "variable": "inonlocal",
+      "read_in": "input.F90:89",
+      "declared_in": "variables.F90:49"
+    },
+    "idiffsies": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for diffusing ignitions for creeping fires",
+      "variable": "idiffsies",
+      "read_in": "input.F90:90",
+      "declared_in": "variables.F90:52"
+    },
+    "ifuel": {
+      "type": "integer",
+      "default": 1,
+      "description": "Option for burning fuel pdf choice",
+      "variable": "ifuel",
+      "read_in": "input.F90:91",
+      "declared_in": "variables.F90:80"
+    },
+    "ignfile": {
+      "type": "string",
+      "default": "ignite.dat",
+      "description": "Name of ignition file",
+      "variable": "ignfile",
+      "read_in": "input.F90:92",
+      "declared_in": "variables.F90:94"
+    },
+    "iturb": {
+      "type": "integer",
+      "default": 2,
+      "description": "Turbulence resolution options",
+      "variable": "iturb",
+      "read_in": "input.F90:95",
+      "declared_in": "variables.F90:41"
+    },
+    "irad": {
+      "type": "integer",
+      "default": 2,
+      "description": "Radiation options",
+      "variable": "irad",
+      "read_in": "input.F90:99",
+      "declared_in": "variables.F90:42"
+    },
+    "icallrad": {
+      "type": "integer",
+      "default": 5,
+      "description": "Frequency of radiation call",
+      "variable": "icallrad",
+      "read_in": "input.F90:100",
+      "declared_in": "variables.F90:43"
+    },
+    "crad": {
+      "type": "real",
+      "default": 50.0,
+      "description": "Soot radiation constant",
+      "variable": "crad",
+      "read_in": "input.F90:101",
+      "declared_in": "variables.F90:44"
+    },
+    "irandseed": {
+      "type": "integer",
+      "default": 0,
+      "description": "Random function seed",
+      "variable": "irandseed",
+      "read_in": "input.F90:102",
+      "declared_in": "variables.F90:45"
+    },
+    "iseed": {
+      "type": "integer",
+      "default": 0,
+      "description": "Seed for randomization function",
+      "variable": "iseed",
+      "read_in": "input.F90:103",
+      "declared_in": "variables.F90:46"
+    },
+    "isootmodel": {
+      "type": "integer",
+      "default": 0,
+      "description": "Options for radiating soot model",
+      "variable": "isootmodel",
+      "read_in": "input.F90:104",
+      "declared_in": "variables.F90:47"
+    },
+    "iradeastflux": {
+      "type": "integer",
+      "default": 0,
+      "description": "Specific radiative flux output through",
+      "variable": "iradeastflux",
+      "read_in": "input.F90:105",
+      "declared_in": "variables.F90:48"
+    },
+    "ixevariation": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for outputting a windfield",
+      "variable": "ixevariation",
+      "read_in": "input.F90:108",
+      "declared_in": "variables.F90:91"
+    },
+    "windfieldin": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for outputting a windfield",
+      "variable": "windfieldin",
+      "read_in": "input.F90:109",
+      "declared_in": "variables.F90:90"
+    },
+    "windfieldout": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for outputting a windfield",
+      "variable": "windfieldout",
+      "read_in": "input.F90:111",
+      "declared_in": "variables.F90:89"
+    },
+    "isensor": {
+      "type": "integer",
+      "default": 0,
+      "description": "Switch for using sensors",
+      "variable": "isensor",
+      "read_in": "input.F90:116",
+      "declared_in": "variables.F90:92"
+    },
+    "iheatsource": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for adding artificial heat source",
+      "variable": "iheatsource",
+      "read_in": "input.F90:120",
+      "declared_in": "variables.F90:51"
+    },
+    "ifbrand": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for tracking firebrands",
+      "variable": "ifbrand",
+      "read_in": "input.F90:124",
+      "declared_in": "variables.F90:54"
+    },
+    "iemissions": {
+      "type": "integer",
+      "default": 0,
+      "description": "Option for tracking particle emissions",
+      "variable": "iemissions",
+      "read_in": "input.F90:128",
+      "declared_in": "variables.F90:50"
+    },
+    "relativehumidity": {
+      "type": "real",
+      "default": 0.0,
+      "description": "Relative humidity if tracking water vapor",
+      "variable": "relativeHumidity",
+      "read_in": "input.F90:131",
+      "declared_in": "variables.F90:53"
+    },
+    "isa": {
+      "type": "integer",
+      "default": 2,
+      "description": "Calculation of sa",
+      "variable": "isa",
+      "read_in": "subGridTurb/input_turb.F90:14",
+      "declared_in": "subGridTurb/variables_turb.F90:9"
+    },
+    "rturbprandtl": {
+      "type": "real",
+      "default": 2.0,
+      "description": "Inverse of turb prandtl number for scalar diffusion",
+      "variable": "rturbprandtl",
+      "read_in": "subGridTurb/input_turb.F90:15",
+      "declared_in": "subGridTurb/variables_turb.F90:10"
+    },
+    "uramp": {
+      "type": "real",
+      "default": 10.0,
+      "description": "Target of ambient x direction wind magnitude (m/s)",
+      "variable": "uramp",
+      "read_in": "xeVariation/input_xeVar.F90:18",
+      "declared_in": "xeVariation/variables_xeVar.F90:9"
+    },
+    "uramptime": {
+      "type": "real",
+      "default": 30.0,
+      "description": "Time to reach target ambient x direction wind (s)",
+      "variable": "uramptime",
+      "read_in": "xeVariation/input_xeVar.F90:19",
+      "declared_in": "xeVariation/variables_xeVar.F90:10"
+    },
+    "vramp": {
+      "type": "real",
+      "default": 10.0,
+      "description": "Target of ambient y direction wind magnitude (m/s)",
+      "variable": "vramp",
+      "read_in": "xeVariation/input_xeVar.F90:20",
+      "declared_in": "xeVariation/variables_xeVar.F90:11"
+    },
+    "vramptime": {
+      "type": "real",
+      "default": 30.0,
+      "description": "Time to reach target ambient y direction wind (s)",
+      "variable": "vramptime",
+      "read_in": "xeVariation/input_xeVar.F90:21",
+      "declared_in": "xeVariation/variables_xeVar.F90:12"
+    },
+    "windspeedupfactor": {
+      "type": "integer",
+      "default": 1,
+      "description": "Factor of speed up between wind run and fire run",
+      "variable": "windspeedupfactor",
+      "read_in": "xeVariation/input_xeVar.F90:23",
+      "declared_in": "xeVariation/variables_xeVar.F90:25"
+    },
+    "itwindfield": {
+      "type": "integer",
+      "default": 80000,
+      "description": "Timestep to start saving wind data",
+      "variable": "itwindfield",
+      "read_in": "xeVariation/input_xeVar.F90:24",
+      "declared_in": "xeVariation/variables_xeVar.F90:26"
+    },
+    "itinterp": {
+      "type": "integer",
+      "default": 10,
+      "description": "# of timesteps between windfield interpolation",
+      "variable": "itinterp",
+      "read_in": "xeVariation/input_xeVar.F90:25",
+      "declared_in": "xeVariation/variables_xeVar.F90:27"
+    },
+    "ibcells": {
+      "type": "integer",
+      "default": 5,
+      "description": "# of x cells saved on boundary",
+      "variable": "ibcells",
+      "read_in": "xeVariation/input_xeVar.F90:26",
+      "declared_in": "xeVariation/variables_xeVar.F90:28"
+    },
+    "jbcells": {
+      "type": "integer",
+      "default": 5,
+      "description": "# of y cells saved on boundary",
+      "variable": "jbcells",
+      "read_in": "xeVariation/input_xeVar.F90:27",
+      "declared_in": "xeVariation/variables_xeVar.F90:29"
+    },
+    "is": {
+      "type": "integer",
+      "default": 0,
+      "description": "Lower x indice for production xvdata file on subdomain (0 = whole domain is used)",
+      "variable": "is",
+      "read_in": "xeVariation/input_xeVar.F90:28",
+      "declared_in": "xeVariation/variables_xeVar.F90:30"
+    },
+    "ie": {
+      "type": "integer",
+      "default": 0,
+      "description": "Upper x indice for production xvdata file on subdomain (0 = whole domain is used)",
+      "variable": "ie",
+      "read_in": "xeVariation/input_xeVar.F90:29",
+      "declared_in": "xeVariation/variables_xeVar.F90:31"
+    },
+    "js": {
+      "type": "integer",
+      "default": 0,
+      "description": "Lower y indice for production xvdata file on subdomain (0 = whole domain is used)",
+      "variable": "js",
+      "read_in": "xeVariation/input_xeVar.F90:30",
+      "declared_in": "xeVariation/variables_xeVar.F90:32"
+    },
+    "je": {
+      "type": "integer",
+      "default": 0,
+      "description": "Upper y indice for production xvdata file on subdomain (0 = whole domain is used)",
+      "variable": "je",
+      "read_in": "xeVariation/input_xeVar.F90:31",
+      "declared_in": "xeVariation/variables_xeVar.F90:33"
+    },
+    "xvdataname": {
+      "type": "string",
+      "default": "xvdata",
+      "description": "Name of xvdata files",
+      "variable": "xvdataname",
+      "read_in": "xeVariation/input_xeVar.F90:34",
+      "declared_in": "xeVariation/variables_xeVar.F90:35"
+    },
+    "nSensors": {
+      "type": "integer",
+      "default": null,
+      "description": "",
+      "variable": "nSensors",
+      "read_in": "xeVariation/input_xeVar.F90:36",
+      "declared_in": null
+    },
+    "SensorTimes": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorTimes",
+      "read_in": "xeVariation/input_xeVar.F90:39",
+      "declared_in": null
+    },
+    "SensorX": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorX",
+      "read_in": "xeVariation/input_xeVar.F90:40",
+      "declared_in": null
+    },
+    "SensorY": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorY",
+      "read_in": "xeVariation/input_xeVar.F90:41",
+      "declared_in": null
+    },
+    "SensorZ": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorZ",
+      "read_in": "xeVariation/input_xeVar.F90:42",
+      "declared_in": null
+    },
+    "SensorUvel": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorUvel",
+      "read_in": "xeVariation/input_xeVar.F90:43",
+      "declared_in": null
+    },
+    "SensorVvel": {
+      "type": "real array",
+      "default": null,
+      "description": "",
+      "variable": "SensorVvel",
+      "read_in": "xeVariation/input_xeVar.F90:44",
+      "declared_in": null
+    },
+    "freqSensor": {
+      "type": "integer",
+      "default": null,
+      "description": "",
+      "variable": "freqSensor",
+      "read_in": "xeVariation/input_xeVar.F90:51",
+      "declared_in": null
+    }
+  }
+}

@@ -1,0 +1,6 @@
+numpy>=1.24
+xarray>=2024.10
+zarr>=3.0
+pandas>=2.0
+matplotlib>=3.7
+ipykernel
