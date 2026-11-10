@@ -1,0 +1,11 @@
+# Ubuntu packages installed by 'install.sh --method apt', one per line.
+# g++ is listed because CMake's project() also probes for a C++ compiler.
+# (numpy is added as python3-numpy when python3 is Ubuntu's own, which has
+# no pip; for any other python3 it is installed with pip.)
+gfortran
+g++
+cmake
+make
+openmpi-bin
+libopenmpi-dev
+openssh-client

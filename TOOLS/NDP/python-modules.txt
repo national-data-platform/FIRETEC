@@ -1,0 +1,10 @@
+# Python modules the conda env must provide (import names), checked by
+# 'install.sh' for the conda toolchain; a missing one triggers a repair.
+# numpy: TOOLS/Ignition/ign_mkr.py
+numpy
+# xarray, zarr: TOOLS/Postprocessing/firetec_to_zarr.py
+xarray
+zarr
+# matplotlib, ipykernel: TOOLS/Postprocessing/visualize_firetec.ipynb
+matplotlib
+ipykernel

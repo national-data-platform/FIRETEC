@@ -1,0 +1,17 @@
+# conda-forge packages for 'install.sh --method conda', one spec per line.
+# Use plain gfortran, not the 'compilers' or 'openmpi-mpifort' metapackages:
+# their activation scripts inject FFLAGS that CMake would bake into the build.
+# gxx is listed because CMake's project() also probes for a C++ compiler.
+gfortran
+gxx
+cmake
+make
+openmpi
+numpy
+# for TOOLS/Postprocessing/firetec_to_zarr.py
+xarray
+zarr
+# for TOOLS/Postprocessing/visualize_firetec.ipynb (matplotlib without a GUI
+# toolkit, and a Jupyter kernel for this env)
+matplotlib-base
+ipykernel

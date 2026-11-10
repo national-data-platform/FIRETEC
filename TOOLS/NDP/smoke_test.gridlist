@@ -1,0 +1,27 @@
+! FIRETEC smoke test for TOOLS/NDP/install.sh --test
+!
+! A small flow with no fire, radiation or turbulence on 2 x 2 ranks. It needs
+! no other input files, works with FIRETEC 1.5.0 and 1.5.1, and finishes in a
+! few seconds. install.sh reads nt, nprocx, nprocy and outname from here, so
+! nt must be a multiple of frqoutput. The fire setup in TOOLS/Gridlist is not
+! used because in 1.5.1 it goes unstable on several ranks and then hangs.
+!
+irst                = 0
+nt                  = 5
+frqoutput           = 5
+nprocx              = 2
+nprocy              = 2
+n                   = 20
+m                   = 20
+l                   = 10
+outname             = './smoke/smoke.out'
+ibcx                = 1
+ibcy                = 1
+ifire               = 0
+irad                = 0
+iturb               = 0
+u0                  = 5.0
+v0                  = 0.0
+uswitch             = 2
+vswitch             = 2
+zu                  = 10
