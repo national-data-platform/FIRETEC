@@ -1,0 +1,15 @@
+{
+  "name": "firetec-{{MY_CASE_NAME}}",
+  "appId": "{{APP_ID}}",
+  "appVersion": "{{APP_VERSION}}",
+  "description": "Production example: 2 whole nodes = 256 ranks, so the gridlist needs nprocx x nprocy = 256 (e.g. 16 x 16)",
+  "execSystemLogicalQueue": "compute",
+  "nodeCount": 2,
+  "coresPerNode": 128,
+  "memoryMB": 249208,
+  "maxMinutes": 720,
+  "parameterSet": {
+    "envVariables": [ { "key": "FIRETEC_CASE_DIR", "value": "{{MY_CASE_DIR}}" } ]
+  },
+  "tags": [ "production" ]
+}

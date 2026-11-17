@@ -1,0 +1,15 @@
+{
+  "name": "firetec-smoke-fire",
+  "appId": "{{APP_ID}}",
+  "appVersion": "{{APP_VERSION}}",
+  "description": "Fire test: 100 steps with a line ignition on 2 x 2 ranks",
+  "execSystemLogicalQueue": "debug",
+  "nodeCount": 1,
+  "coresPerNode": 4,
+  "memoryMB": 7600,
+  "maxMinutes": 10,
+  "parameterSet": {
+    "envVariables": [ { "key": "FIRETEC_CASE_DIR", "value": "{{CASES_DIR}}/smoke-fire" } ]
+  },
+  "tags": [ "smoke-test", "expect-FINISHED" ]
+}

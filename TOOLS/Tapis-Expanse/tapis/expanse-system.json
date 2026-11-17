@@ -1,0 +1,54 @@
+{
+  "id": "{{SYSTEM_ID}}",
+  "description": "SDSC Expanse standard CPU nodes via Slurm, for FIRETEC with the Tapis ZIP runtime",
+  "systemType": "LINUX",
+  "host": "login.expanse.sdsc.edu",
+  "effectiveUserId": "{{EXPANSE_USER}}",
+  "defaultAuthnMethod": "PKI_KEYS",
+  "rootDir": "/",
+  "canExec": true,
+  "canRunBatch": true,
+  "jobRuntimes": [
+    { "runtimeType": "SINGULARITY" },
+    { "runtimeType": "ZIP" }
+  ],
+  "jobWorkingDir": "{{JOB_WORKING_DIR}}",
+  "batchScheduler": "SLURM",
+  "batchDefaultLogicalQueue": "debug",
+  "batchLogicalQueues": [
+    {
+      "name": "debug",
+      "description": "Expanse debug partition: 30 min, up to 2 nodes, for smoke tests",
+      "hpcQueueName": "debug",
+      "maxJobs": 2, "maxJobsPerUser": 2,
+      "minNodeCount": 1, "maxNodeCount": 2,
+      "minCoresPerNode": 1, "maxCoresPerNode": 128,
+      "minMemoryMB": 1, "maxMemoryMB": 249208,
+      "minMinutes": 1, "maxMinutes": 30,
+      "schedulerOptions": [ { "name": "lustre", "arg": "--constraint=lustre", "inputMode": "FIXED" } ]
+    },
+    {
+      "name": "shared",
+      "description": "Expanse shared partition: one node, fewer than 128 cores, up to 48 h",
+      "hpcQueueName": "shared",
+      "maxJobs": 100, "maxJobsPerUser": 100,
+      "minNodeCount": 1, "maxNodeCount": 1,
+      "minCoresPerNode": 1, "maxCoresPerNode": 127,
+      "minMemoryMB": 1, "maxMemoryMB": 249208,
+      "minMinutes": 1, "maxMinutes": 2880,
+      "schedulerOptions": [ { "name": "lustre", "arg": "--constraint=lustre", "inputMode": "FIXED" } ]
+    },
+    {
+      "name": "compute",
+      "description": "Expanse compute partition: whole 128-core nodes (billed in full), up to 32 nodes, 48 h",
+      "hpcQueueName": "compute",
+      "maxJobs": 64, "maxJobsPerUser": 64,
+      "minNodeCount": 1, "maxNodeCount": 32,
+      "minCoresPerNode": 1, "maxCoresPerNode": 128,
+      "minMemoryMB": 1, "maxMemoryMB": 249208,
+      "minMinutes": 1, "maxMinutes": 2880,
+      "schedulerOptions": [ { "name": "lustre", "arg": "--constraint=lustre", "inputMode": "FIXED" } ]
+    }
+  ],
+  "tags": [ "expanse", "sdsc", "slurm", "firetec" ]
+}

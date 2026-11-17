@@ -1,0 +1,15 @@
+{
+  "name": "firetec-smoke-bad-decomp",
+  "appId": "{{APP_ID}}",
+  "appVersion": "{{APP_VERSION}}",
+  "description": "Negative test: gridlist asks for 6 ranks, job has 4; the launcher must fail it",
+  "execSystemLogicalQueue": "debug",
+  "nodeCount": 1,
+  "coresPerNode": 4,
+  "memoryMB": 7600,
+  "maxMinutes": 10,
+  "parameterSet": {
+    "envVariables": [ { "key": "FIRETEC_CASE_DIR", "value": "{{CASES_DIR}}/smoke-bad-decomp" } ]
+  },
+  "tags": [ "smoke-test", "expect-FAILED" ]
+}

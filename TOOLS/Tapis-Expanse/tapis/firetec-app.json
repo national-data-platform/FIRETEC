@@ -1,0 +1,47 @@
+{
+  "id": "{{APP_ID}}",
+  "version": "{{APP_VERSION}}",
+  "description": "LANL HIGRAD/FIRETEC 1.5.0 (firerad) built natively on SDSC Expanse, launched with the Tapis ZIP runtime",
+  "runtime": "ZIP",
+  "containerImage": "{{APP_ARCHIVE}}",
+  "jobType": "BATCH",
+  "strictFileInputs": true,
+  "jobAttributes": {
+    "description": "FIRETEC run ${JobName}",
+    "execSystemId": "{{SYSTEM_ID}}",
+    "execSystemLogicalQueue": "debug",
+    "execSystemExecDir": "${JobWorkingDir}/jobs/${JobUUID}",
+    "execSystemInputDir": "${JobWorkingDir}/jobs/${JobUUID}/run",
+    "execSystemOutputDir": "${JobWorkingDir}/jobs/${JobUUID}/run",
+    "archiveSystemId": "{{SYSTEM_ID}}",
+    "archiveSystemDir": "${JobWorkingDir}/jobs/${JobUUID}/run",
+    "archiveMode": "ALWAYS",
+    "isMpi": false,
+    "nodeCount": 1,
+    "coresPerNode": 4,
+    "memoryMB": 7600,
+    "maxMinutes": 10,
+    "parameterSet": {
+      "schedulerOptions": [
+        { "name": "allocation", "arg": "-A {{EXPANSE_PROJECT}}", "inputMode": "INCLUDE_BY_DEFAULT",
+          "description": "Expanse project to charge; a job can override it with a scheduler option named allocation" },
+        { "name": "slurmJobName", "arg": "--job-name=firetec", "inputMode": "INCLUDE_BY_DEFAULT",
+          "description": "Name shown by squeue" }
+      ],
+      "envVariables": [
+        { "key": "FIRETEC_GRIDLIST", "value": "gridlist", "inputMode": "INCLUDE_BY_DEFAULT",
+          "description": "Gridlist file in the case directory; FIRETEC 1.5.0 always reads ./gridlist, so the launcher links this name to it" },
+        { "key": "FIRETEC_CASE_DIR", "value": "", "inputMode": "INCLUDE_ON_DEMAND",
+          "description": "Absolute path on Expanse of a case directory to copy in; use instead of the 'case' file input" }
+      ],
+      "archiveFilter": { "includes": [], "excludes": [], "includeLaunchFiles": true }
+    },
+    "fileInputs": [
+      { "name": "case", "inputMode": "OPTIONAL", "targetPath": "case", "envKey": "FIRETEC_CASE_INPUT",
+        "description": "Case directory as a Tapis URL: gridlist plus ignite.dat, trees*.dat, topo or restart files as needed. Staged to run/case." }
+    ],
+    "tags": [ "firetec", "wildfire", "mpi" ]
+  },
+  "tags": [ "firetec", "expanse", "zip-runtime" ],
+  "notes": { "source": "https://github.com/national-data-platform/FIRETEC", "branch": "main", "license": "BSD-3-Clause" }
+}
